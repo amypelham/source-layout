@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/* Color Variables */
+:root {
+    --color1: rgb(216, 212, 212);
+    --color2: rgb(247, 247, 247);
+    --color3: #03192b;
+}
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+
+/* Responsive font */
+html {
+    font-size: 62.5%;
+    font-family: 'Oswald', sans-serif;
+
+  }
+
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+/******************************************
+/* HEADER
+/*******************************************/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(105, 118, 136, 1);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow:inset 0 0 0 2000px rgba(12, 11, 11, 0.3);
+    height: 60vh;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    height: 40vh;
+}
+
+
+nav {
+    color: var(--color1);
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1em;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+nav ul a, nav ul a:visited {
+    color: var(--color1);
+}
+
+
+nav ul {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav ul a:hover {
+    font-size: 1.8rem;
+    color: var(--color2);
+}
+
+.donate {
+    background-color: var(--color1);
+    border: none;
+    height: 2.5em;
+    width: 5em;
+    border-radius: .5em;
+    color: rgba(105, 118, 136, 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.donate:hover {
+    background-color: #024a81;
+    color: var(--color2);
+    border: .1rem solid var(--color2);
+    cursor: pointer;
+}
+
+.navButton {
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+h1 {
+    color: var(--color2);
+
+    font-weight: 900;
+    font-size: 7rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header h1 + p {
+    color: var(--color2);
+    font-weight: 200;
+    font-size: 2.4rem;
+    line-height: 1.3em;
+    letter-spacing: .08em;
+    text-align: center;
+    width: 65%;
+    backdrop-filter: blur(.1em);
+}
+
+header div > span a {
+    color: var(--color2);
+
+    font-weight: 200;
+    font-size: 2rem;
+    text-decoration: none;
+    backdrop-filter: blur(5em);
+}
+
+span a:hover {
+    font-size: 2.2rem;
+}
+
+.fa-circle-play {
+    margin-right: .3em; 
+}
+
+@media (max-width: 1472px) {
+    header {
+        background-position: center;
+    }
+}
+
+/******************************************
+/* BODY
+/*******************************************/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color3);
+}
+
+.why {
+    height: 40vh;
+}
+
+.why, .volunteer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+}
+
+.volunteer {
+    height: 80vh;
+}
+
+.why h2, .volunteer h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: .3em;
+    color: var(--color3);
+}
+
+.why p, .volunteer p {
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 35%;
+    line-height: 1.3em;
+}
+
+.volunteer p {
+    margin-bottom: 2em;
+}
+
+/* Visit */
+
+.visit {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--color1);
+    height: 70vh;
+}
+
+.visit section {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: auto;
+    justify-content: center;
+}
+
+.visitOptions {
+    align-items: center;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: var(--color3);
+}
+
+h3 + p {
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    width: 80%;
+    line-height: 1.2em;
+    margin-bottom: 2em;
+    color: var(--color3);
+}
+
+
+.visit img {
+    width: 75%;
+    height: 30%;
+    margin: 4em auto;
+}
+
+.sectionButton {
+    color: black;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 10em;
+    height: 3em;
+    border: 1px solid rgb(87, 87, 87);
+    background-color: var(--color1);
+    text-decoration: none;
+    color: var(--color3);
+    letter-spacing: .08em;
+}
+
+.sectionButton:hover, .volunteer .sectionButton:hover {
+    background-color: var(--color3);
+    color: var(--color2);
+    cursor: pointer;
+}
+
+.volunteer .sectionButton {
+    background-color: var(--color2);
+}
+
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-brands, .fa-solid {
+    color: var(--color1);
+    font-size: 2.5rem;
+}
+
+.fa-brands:hover, .fa-solid:hover {
+    font-size: 2.8rem;
+}
+
+
+.topFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 91%;
+    margin-top: 4em;
+    align-items: center;
+}
+
+.topFooter section {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerNav {
+    color: rgb(146, 146, 146);
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.margin {
+    margin-bottom: 1em;
+}
+
+.footerNav a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+.footerNav a:hover {
+    text-decoration: underline;
+}
+
+.footerNav h4 {
+    margin-bottom: .5em;
+}
+
+#social, .footerLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    color: var(--color1);
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    width: 15%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+address h4 {
+    color: var(--color2);
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-bottom: .3em;
+}
+
+address a, address a:visited {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+.bottomFooter {
+    background-color: var(--color3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 91%;
+}
+
+hr {
+    width: 91%;
+}
+
+h5 {
+    color: var(--color2);
+    font-size: 1.5rem;
+
+    font-weight: 500;
+}
+
+@media (max-width: 1380px) {
+    
+    h5 {
+        font-size: 1.2rem;
+    }
+}
+  
